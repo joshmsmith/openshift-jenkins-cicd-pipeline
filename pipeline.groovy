@@ -14,7 +14,6 @@ node {
     bat "rm -rf oc-build"
     bat "mkdir oc-build\\deployments"
     bat "cp target\\ROOT.war oc-build\\deployments\\ROOT.war"
-    bat "${ocCmd} logout"
     bat "${ocCmd} login localhost:8443 -u admin -p admin --insecure-skip-tls-verify=true"
     
     stage "Deploy to Dev"
